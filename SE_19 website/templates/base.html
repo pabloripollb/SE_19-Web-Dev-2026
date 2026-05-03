@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDevBasics2026</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <!-- This pulls in your header partial -->
+    {% include 'includes/header.html' %}
+
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- This pulls in your footer partial -->
+    {% include 'includes/footer.html' %}
+
+</body>
+</html>

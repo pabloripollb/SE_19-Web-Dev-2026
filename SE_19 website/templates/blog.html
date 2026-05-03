@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="grid-container">
+    {% for post in posts %}
+    <article class="card">
+        <h2>{{ post.title }}</h2>
+        <p style="font-size: 0.8em; color: gray;">Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
+        <br>
+        <p>{{ post.content }}</p>
+    </article>
+    {% else %}
+    <article class="card">
+        <h2>No posts yet!</h2>
+        <p>Go to the admin panel to write your first post.</p>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %}
